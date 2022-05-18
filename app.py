@@ -193,6 +193,7 @@ class Application:
             return
 
         prediction = {}
+        result=[]
         prediction['blank'] = result[0][0]
         inde = 1
         for i in ascii_uppercase:
@@ -244,21 +245,21 @@ class Application:
     	if(len(predicts) > 0):
             self.word=""
             self.str+=" "
-            self.str+=predicts[0]
+            self.str+=predicts[0] 
 
     def action2(self):
     	predicts=self.hs.suggest(self.word)
     	if(len(predicts) > 1):
             self.word=""
             self.str+=" "
-            self.str+=predicts[1]
+            self.str+=predicts[1] 
 
     def action3(self):
     	predicts=self.hs.suggest(self.word)
     	if(len(predicts) > 2):
             self.word=""
             self.str+=" "
-            self.str+=predicts[2]
+            self.str+=predicts[2] #Hello
             
     def action4(self):
     	predicts=self.hs.suggest(self.word)
@@ -354,10 +355,10 @@ class Application:
         
         #Converting to Audio
         self.speech.setText(self.translatedText)
-        self.speech.toSpeech()
-        self.speech.playAudio()
-        self.speech = TextToAudio()
+        self.speech.toSpeech() #Audio file Generate
+        self.speech.playAudio() #Play Audio
         del self.speech
+        self.speech = TextToAudio()
         self.speech.setLang(self.pref_lang)
 
 

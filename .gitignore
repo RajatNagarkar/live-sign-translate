@@ -10,8 +10,8 @@ dist/
 # Compiled Java class files
 *.class
 
-# Compiled Python bytecode
-*.py[cod]
+# Trained Model
+*.h5
 
 # Log files
 *.log
